@@ -159,6 +159,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             @Override
             public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
 
+
+                Log.i(TAG,"Data: "+ response.toString());
                 boolean result = response.body().isValidSignature();
 
                 if (result) {
